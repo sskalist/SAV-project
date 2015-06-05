@@ -5,9 +5,6 @@ import leon.annotation._
 
 
 object BinomialTree{
-  //abstract class BinomialList
-  //case class Nil() extends BinomialList
-  //case class Cons
   
   case class BinomialTree(forest: BinomialForest, value: BigInt) { 
     
@@ -19,7 +16,6 @@ object BinomialTree{
       Set(value) ++ forest.contents
     }
     
-    //@induct
     def mergeEqual(that: BinomialTree): BinomialTree = {
       require( this.rank == that.rank && equalRank(this,that) )
         if (this.value > that.value) 
